@@ -7,7 +7,7 @@ const emit = (target, detail, options) => {
     const interval = setInterval(() => {
       if (attempts++ >= options.timeout) clearInterval(interval)
 
-      const event = new CustomEvent(options.eventName, { ...detail })
+      const event = new CustomEvent(options.eventName, { detail })
 
       if (target[detail.key] === detail.value) {
         window.dispatchEvent(event)

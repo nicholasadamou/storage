@@ -60,7 +60,7 @@ window.addEventListener('DonaldTrump', maga)
 
 ## The Event
 
-As with any event listener, an event is provided to your callback. In this instance, `event` will have two properties: `key`, and `value`. These values represent the storage key that changed and the new value that accompanies the change.
+As with any event listener, an event is provided to your callback. In this instance, `event.detail` will have two properties: `key`, and `value`. These values represent the storage key that changed and the new value that accompanies the change.
 
 ```js
 import storage from '@nicholasadamou/storage'
