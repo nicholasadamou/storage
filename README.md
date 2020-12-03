@@ -7,7 +7,9 @@ _Have you ever needed to listen to localStorage or sessionStorage to change from
 `storage` is a small function that emits events in the same page and tab that `sessionStorage` and `localStorage` are changed in.
 
 **No dependencies!**
+
 **Much 🔥!**
+
 **Only ~800b!**
 
 ## Installation
