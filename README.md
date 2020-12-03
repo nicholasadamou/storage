@@ -74,7 +74,7 @@ window.addEventListener('DonaldTrump', (event) => {
 })
 
 localStorage.setItem('Election 2020 Quote', 'We WON by a lot!!')
-// { key: 'foo', value: 'bar' }
+// { key: 'Election 2020 Quote', value: 'We WON by a lot!!' }
 ```
 
 ## License
