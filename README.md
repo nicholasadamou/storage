@@ -67,7 +67,7 @@ window.addEventListener('DonaldTrump', (event) => {
  console.log(event);
 })
 
-localStorage.setItem('foo', 'bar')
+localStorage.setItem('Election 2020 Quote', 'We WON by a lot!!')
 // { key: 'foo', value: 'bar' }
 ```
 

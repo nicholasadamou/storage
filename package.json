@@ -1,12 +1,13 @@
 {
-  "name": "storage",
+  "name": "@nicholasadamou/storage",
   "version": "1.0.0",
   "description": "A small function that emits events in the same page and tab that sessionStorage and localStorage are changed in.",
   "main": "index.js",
   "reveal": true,
   "scripts": {
     "build": "babel ./src/index.js -o ./index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"publish:npm": "npx yarn build"
   },
   "repository": {
     "type": "git",
