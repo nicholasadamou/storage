@@ -47,6 +47,8 @@ The first argument must be a string, one of: `"local"` or `"session"` to determi
 You can pass an options object as the second argument to `storage`. This options object currently supports one property: `eventName`. Setting the `eventName` will allow you flexibility to have different names for different targets, such as `localStorage` and `sessionStorage`.
 
 ```js
+import storage from '@nicholasadamou/storage'
+
 storage('session', {
   eventName: 'DonaldTrump'
 })
@@ -59,12 +61,14 @@ window.addEventListener('DonaldTrump', maga)
 As with any event listener, an event is provided to your callback. In this instance, `event` will have two properties: `key`, and `value`. These values represent the storage key that changed and the new value that accompanies the change.
 
 ```js
+import storage from '@nicholasadamou/storage'
+
 storage('local', {
   eventName: 'DonaldTrump'
 })
 
 window.addEventListener('DonaldTrump', (event) => {
- console.log(event);
+ console.log(event)
 })
 
 localStorage.setItem('Election 2020 Quote', 'We WON by a lot!!')
