@@ -1,6 +1,6 @@
 {
   "name": "@nicholasadamou/storage",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A small function that emits events in the same page and tab that sessionStorage and localStorage are changed in.",
   "main": "index.js",
   "reveal": true,
@@ -29,8 +29,5 @@
     "@babel/core": "^7.0.0-beta.51",
     "@babel/preset-env": "^7.0.0-beta.51",
     "babel-preset-minify": "^0.4.3"
-  },
-  "dependencies": {
-    "storage-utilities": "^0.0.0"
   }
 }

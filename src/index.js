@@ -1,4 +1,18 @@
-import storageUtils from 'storage-utilities'
+const stringify = target => {
+  return typeof target === 'string'
+    ? target
+    : typeof target === 'undefined'
+      ? 'undefined'
+      : JSON.stringify(target)
+}
+
+const parse = target => {
+  try {
+    return JSON.parse(target)
+  } catch (error) {
+    return target
+  }
+}
 
 const emit = (target, detail, options) => {
   return new Promise(() => {
@@ -57,7 +71,7 @@ export default (storage, options) => {
   const removeItem = target.removeItem.bind(target)
 
   target.setItem = (key, value) => {
-    const _value = storageUtils.stringify(value)
+    const _value = stringify(value)
 
     emit(target, { key, value: _value, _target: opts.targetName }, opts)
     setItem(key, _value)
