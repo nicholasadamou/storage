@@ -6,14 +6,6 @@ const stringify = target => {
       : JSON.stringify(target)
 }
 
-const parse = target => {
-  try {
-    return JSON.parse(target)
-  } catch (error) {
-    return target
-  }
-}
-
 const emit = (target, detail, options) => {
   return new Promise(() => {
     let attempts = 0
@@ -70,14 +62,14 @@ export default (storage, options) => {
   const setItem = target.setItem.bind(target)
   const removeItem = target.removeItem.bind(target)
 
-  target.setItem = (key, value) => {
+  target.__proto__.setItem = (key, value) => {
     const _value = stringify(value)
 
     emit(target, { key, value: _value, _target: opts.targetName }, opts)
     setItem(key, _value)
   }
 
-  target.removeItem = (key) => {
+  target.__proto__.removeItem = (key) => {
     emit(target, { key, _target: opts.targetName }, opts)
     removeItem(key)
   }

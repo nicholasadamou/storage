@@ -1,6 +1,6 @@
 {
   "name": "@nicholasadamou/storage",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A small function that emits events in the same page and tab that sessionStorage and localStorage are changed in.",
   "main": "index.js",
   "reveal": true,
